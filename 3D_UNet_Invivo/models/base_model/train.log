@@ -1,0 +1,161 @@
+2020-01-27 17:30:37,387:INFO: Using config: {'_model_dir': 'models/base_model', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': allow_soft_placement: true
+graph_options {
+  rewrite_options {
+    meta_optimizer_iterations: ONE
+  }
+}
+, '_keep_checkpoint_max': 0, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 700, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7fc427455f98>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+2020-01-27 17:30:38,813:INFO: Calling model_fn.
+2020-01-27 17:30:38,862:INFO: conv1: (?, 32, 128, 128, 32)
+2020-01-27 17:30:38,887:INFO: conv2: (?, 32, 128, 128, 64)
+2020-01-27 17:30:38,888:INFO: maxpool layer: (?, 16, 64, 64, 64)
+2020-01-27 17:30:38,914:INFO: conv1: (?, 16, 64, 64, 64)
+2020-01-27 17:30:38,938:INFO: conv2: (?, 16, 64, 64, 128)
+2020-01-27 17:30:38,939:INFO: maxpool layer: (?, 8, 32, 32, 128)
+2020-01-27 17:30:38,965:INFO: conv1: (?, 8, 32, 32, 128)
+2020-01-27 17:30:38,990:INFO: conv2: (?, 8, 32, 32, 256)
+2020-01-27 17:30:38,991:INFO: maxpool layer: (?, 4, 16, 16, 256)
+2020-01-27 17:30:39,016:INFO: conv1: (?, 4, 16, 16, 256)
+2020-01-27 17:30:39,042:INFO: conv2: (?, 4, 16, 16, 512)
+2020-01-27 17:30:39,078:INFO: upconv layer: (?, 8, 32, 32, 512)
+2020-01-27 17:30:39,078:INFO: concat layer: (?, 8, 32, 32, 256)
+2020-01-27 17:30:39,121:INFO: up_conv layer1: (?, 8, 32, 32, 256)
+2020-01-27 17:30:39,146:INFO: up_conv layer2 : (?, 8, 32, 32, 256)
+2020-01-27 17:30:39,163:INFO: upconv layer: (?, 16, 64, 64, 256)
+2020-01-27 17:30:39,163:INFO: concat layer: (?, 16, 64, 64, 128)
+2020-01-27 17:30:39,189:INFO: up_conv layer1: (?, 16, 64, 64, 128)
+2020-01-27 17:30:39,215:INFO: up_conv layer2 : (?, 16, 64, 64, 128)
+2020-01-27 17:30:39,231:INFO: upconv layer: (?, 32, 128, 128, 128)
+2020-01-27 17:30:39,231:INFO: concat layer: (?, 32, 128, 128, 64)
+2020-01-27 17:30:39,257:INFO: up_conv layer1: (?, 32, 128, 128, 64)
+2020-01-27 17:30:39,283:INFO: up_conv layer2 : (?, 32, 128, 128, 64)
+2020-01-27 17:30:40,730:INFO: Done calling model_fn.
+2020-01-27 17:30:40,730:INFO: Create CheckpointSaverHook.
+2020-01-27 17:30:41,413:INFO: Graph was finalized.
+2020-01-27 17:30:46,992:INFO: Running local_init_op.
+2020-01-27 17:30:47,073:INFO: Done running local_init_op.
+2020-01-27 17:30:48,528:INFO: Saving checkpoints for 0 into models/base_model/model.ckpt.
+2020-01-27 17:30:48,792:INFO: models/base_model/model.ckpt-0 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-27 17:30:59,949:INFO: loss = 0.32286212, step = 0
+2020-01-27 17:40:49,987:INFO: Saving checkpoints for 519 into models/base_model/model.ckpt.
+2020-01-27 17:40:50,157:INFO: models/base_model/model.ckpt-519 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-27 17:44:22,438:INFO: global_step/sec: 0.872286
+2020-01-27 17:44:22,439:INFO: loss = 0.0047219987, step = 700 (802.490 sec)
+2020-01-27 17:50:50,042:INFO: Saving checkpoints for 1034 into models/base_model/model.ckpt.
+2020-01-27 17:50:50,209:INFO: models/base_model/model.ckpt-1034 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-27 17:57:57,928:INFO: global_step/sec: 0.85838
+2020-01-27 17:57:57,929:INFO: loss = 0.0013009086, step = 1400 (815.490 sec)
+2020-01-27 18:00:50,319:INFO: Saving checkpoints for 1549 into models/base_model/model.ckpt.
+2020-01-27 18:00:50,490:INFO: models/base_model/model.ckpt-1549 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-27 18:10:51,233:INFO: Saving checkpoints for 2071 into models/base_model/model.ckpt.
+2020-01-27 18:10:51,436:INFO: models/base_model/model.ckpt-2071 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-27 18:11:25,760:INFO: global_step/sec: 0.866517
+2020-01-27 18:11:25,761:INFO: loss = 0.00053001725, step = 2100 (807.832 sec)
+2020-01-27 18:20:51,887:INFO: Saving checkpoints for 2598 into models/base_model/model.ckpt.
+2020-01-27 18:20:52,049:INFO: models/base_model/model.ckpt-2598 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-27 18:24:42,988:INFO: global_step/sec: 0.878042
+2020-01-27 18:24:42,989:INFO: loss = 0.00019326067, step = 2800 (797.228 sec)
+2020-01-27 18:30:52,721:INFO: Saving checkpoints for 3126 into models/base_model/model.ckpt.
+2020-01-27 18:30:52,884:INFO: models/base_model/model.ckpt-3126 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-27 18:37:59,554:INFO: global_step/sec: 0.878772
+2020-01-27 18:37:59,555:INFO: loss = 0.001089654, step = 3500 (796.566 sec)
+2020-01-27 18:40:53,810:INFO: Saving checkpoints for 3654 into models/base_model/model.ckpt.
+2020-01-27 18:40:53,970:INFO: models/base_model/model.ckpt-3654 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-27 18:50:54,330:INFO: Saving checkpoints for 4181 into models/base_model/model.ckpt.
+2020-01-27 18:50:54,491:INFO: models/base_model/model.ckpt-4181 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-27 18:51:17,372:INFO: global_step/sec: 0.877393
+2020-01-27 18:51:17,373:INFO: loss = 0.0010849275, step = 4200 (797.818 sec)
+2020-01-27 19:00:55,294:INFO: Saving checkpoints for 4709 into models/base_model/model.ckpt.
+2020-01-27 19:00:55,471:INFO: models/base_model/model.ckpt-4709 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-27 19:04:33,982:INFO: global_step/sec: 0.878724
+2020-01-27 19:04:33,982:INFO: loss = 0.00024109345, step = 4900 (796.610 sec)
+2020-01-27 19:10:56,174:INFO: Saving checkpoints for 5237 into models/base_model/model.ckpt.
+2020-01-27 19:10:56,340:INFO: models/base_model/model.ckpt-5237 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-27 19:17:51,270:INFO: global_step/sec: 0.877976
+2020-01-27 19:17:51,271:INFO: loss = 0.00033678228, step = 5600 (797.288 sec)
+2020-01-27 19:20:56,708:INFO: Saving checkpoints for 5764 into models/base_model/model.ckpt.
+2020-01-27 19:20:56,870:INFO: models/base_model/model.ckpt-5764 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-27 19:30:57,028:INFO: Saving checkpoints for 6291 into models/base_model/model.ckpt.
+2020-01-27 19:30:57,192:INFO: models/base_model/model.ckpt-6291 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-27 19:31:08,798:INFO: global_step/sec: 0.877712
+2020-01-27 19:31:08,799:INFO: loss = 0.000121154524, step = 6300 (797.528 sec)
+2020-01-27 19:40:57,513:INFO: Saving checkpoints for 6818 into models/base_model/model.ckpt.
+2020-01-27 19:40:57,680:INFO: models/base_model/model.ckpt-6818 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-27 19:44:24,816:INFO: Saving checkpoints for 7000 into models/base_model/model.ckpt.
+2020-01-27 19:44:24,979:INFO: models/base_model/model.ckpt-7000 is not in all_model_checkpoint_paths. Manually adding it.
+2020-01-27 19:44:25,276:INFO: Loss for final step: 0.00019861996.
+2020-01-27 19:44:27,665:INFO: Calling model_fn.
+2020-01-27 19:44:27,686:INFO: conv1: (?, 32, ?, ?, 32)
+2020-01-27 19:44:27,705:INFO: conv2: (?, 32, ?, ?, 64)
+2020-01-27 19:44:27,706:INFO: maxpool layer: (?, 16, ?, ?, 64)
+2020-01-27 19:44:27,724:INFO: conv1: (?, 16, ?, ?, 64)
+2020-01-27 19:44:27,743:INFO: conv2: (?, 16, ?, ?, 128)
+2020-01-27 19:44:27,744:INFO: maxpool layer: (?, 8, ?, ?, 128)
+2020-01-27 19:44:27,763:INFO: conv1: (?, 8, ?, ?, 128)
+2020-01-27 19:44:27,781:INFO: conv2: (?, 8, ?, ?, 256)
+2020-01-27 19:44:27,782:INFO: maxpool layer: (?, 4, ?, ?, 256)
+2020-01-27 19:44:27,801:INFO: conv1: (?, 4, ?, ?, 256)
+2020-01-27 19:44:27,819:INFO: conv2: (?, 4, ?, ?, 512)
+2020-01-27 19:44:27,836:INFO: upconv layer: (?, 8, ?, ?, 512)
+2020-01-27 19:44:27,836:INFO: concat layer: (?, 8, ?, ?, 256)
+2020-01-27 19:44:27,855:INFO: up_conv layer1: (?, 8, ?, ?, 256)
+2020-01-27 19:44:27,874:INFO: up_conv layer2 : (?, 8, ?, ?, 256)
+2020-01-27 19:44:27,891:INFO: upconv layer: (?, 16, ?, ?, 256)
+2020-01-27 19:44:27,891:INFO: concat layer: (?, 16, ?, ?, 128)
+2020-01-27 19:44:27,911:INFO: up_conv layer1: (?, 16, ?, ?, 128)
+2020-01-27 19:44:27,929:INFO: up_conv layer2 : (?, 16, ?, ?, 128)
+2020-01-27 19:44:27,946:INFO: upconv layer: (?, 32, ?, ?, 128)
+2020-01-27 19:44:27,946:INFO: concat layer: (?, 32, ?, ?, 64)
+2020-01-27 19:44:28,070:INFO: up_conv layer1: (?, 32, ?, ?, 64)
+2020-01-27 19:44:28,088:INFO: up_conv layer2 : (?, 32, ?, ?, 64)
+2020-01-27 19:44:28,224:INFO: Done calling model_fn.
+2020-01-27 19:44:28,238:INFO: Starting evaluation at 2020-01-27-18:44:28
+2020-01-27 19:44:28,374:INFO: Graph was finalized.
+2020-01-27 19:44:28,376:INFO: Restoring parameters from models/base_model/model.ckpt-7000
+2020-01-27 19:44:28,488:INFO: Running local_init_op.
+2020-01-27 19:44:28,503:INFO: Done running local_init_op.
+2020-01-27 19:44:33,639:INFO: Finished evaluation at 2020-01-27-18:44:33
+2020-01-27 19:44:33,640:INFO: Saving dict for global step 7000: global_step = 7000, iou = 0.57225394, loss = 0.013004836
+2020-01-27 19:44:33,754:INFO: Saving 'checkpoint_path' summary for global step 7000: models/base_model/model.ckpt-7000
+2020-01-28 10:29:05,076:INFO: Using config: {'_model_dir': 'models/base_model', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': allow_soft_placement: true
+graph_options {
+  rewrite_options {
+    meta_optimizer_iterations: ONE
+  }
+}
+, '_keep_checkpoint_max': 0, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 700, '_train_distribute': None, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7fc80b3af048>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1}
+2020-01-28 10:29:05,902:INFO: Calling model_fn.
+2020-01-28 10:29:05,963:INFO: conv1: (?, 32, ?, ?, 32)
+2020-01-28 10:29:05,982:INFO: conv2: (?, 32, ?, ?, 64)
+2020-01-28 10:29:05,983:INFO: maxpool layer: (?, 16, ?, ?, 64)
+2020-01-28 10:29:06,002:INFO: conv1: (?, 16, ?, ?, 64)
+2020-01-28 10:29:06,022:INFO: conv2: (?, 16, ?, ?, 128)
+2020-01-28 10:29:06,023:INFO: maxpool layer: (?, 8, ?, ?, 128)
+2020-01-28 10:29:06,043:INFO: conv1: (?, 8, ?, ?, 128)
+2020-01-28 10:29:06,063:INFO: conv2: (?, 8, ?, ?, 256)
+2020-01-28 10:29:06,064:INFO: maxpool layer: (?, 4, ?, ?, 256)
+2020-01-28 10:29:06,083:INFO: conv1: (?, 4, ?, ?, 256)
+2020-01-28 10:29:06,103:INFO: conv2: (?, 4, ?, ?, 512)
+2020-01-28 10:29:06,121:INFO: upconv layer: (?, 8, ?, ?, 512)
+2020-01-28 10:29:06,121:INFO: concat layer: (?, 8, ?, ?, 256)
+2020-01-28 10:29:06,141:INFO: up_conv layer1: (?, 8, ?, ?, 256)
+2020-01-28 10:29:06,161:INFO: up_conv layer2 : (?, 8, ?, ?, 256)
+2020-01-28 10:29:06,178:INFO: upconv layer: (?, 16, ?, ?, 256)
+2020-01-28 10:29:06,178:INFO: concat layer: (?, 16, ?, ?, 128)
+2020-01-28 10:29:06,198:INFO: up_conv layer1: (?, 16, ?, ?, 128)
+2020-01-28 10:29:06,217:INFO: up_conv layer2 : (?, 16, ?, ?, 128)
+2020-01-28 10:29:06,234:INFO: upconv layer: (?, 32, ?, ?, 128)
+2020-01-28 10:29:06,234:INFO: concat layer: (?, 32, ?, ?, 64)
+2020-01-28 10:29:06,254:INFO: up_conv layer1: (?, 32, ?, ?, 64)
+2020-01-28 10:29:06,281:INFO: up_conv layer2 : (?, 32, ?, ?, 64)
+2020-01-28 10:29:06,300:INFO: Done calling model_fn.
+2020-01-28 10:29:06,443:INFO: Graph was finalized.
+2020-01-28 10:29:06,752:INFO: Restoring parameters from models/base_model/model.ckpt-7000
+2020-01-28 10:29:06,936:INFO: Running local_init_op.
+2020-01-28 10:29:06,947:INFO: Done running local_init_op.
+2020-01-28 10:29:09,763:INFO: Predicting patient: 0.
+2020-01-28 10:29:09,927:INFO: Predicting patient: 1.
+2020-01-28 10:29:10,089:INFO: Predicting patient: 2.
+2020-01-28 10:29:10,251:INFO: Predicting patient: 3.
+2020-01-28 10:29:10,411:INFO: Predicting patient: 4.
+2020-01-28 10:29:10,516:INFO: Predictions saved to: models/base_model/preds.npy.
